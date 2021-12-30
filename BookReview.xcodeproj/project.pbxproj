@@ -23,6 +23,10 @@
 		6B657705277CCAB200C9EB93 /* ReviewWritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B657704277CCAB200C9EB93 /* ReviewWritePresenter.swift */; };
 		6B657708277CDF7A00C9EB93 /* SearchBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B657707277CDF7A00C9EB93 /* SearchBookViewController.swift */; };
 		6B65770A277CDF9400C9EB93 /* SearchBookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B657709277CDF9400C9EB93 /* SearchBookPresenter.swift */; };
+		6B657754277DAC3800C9EB93 /* BookSearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B657753277DAC3800C9EB93 /* BookSearchRequestModel.swift */; };
+		6B657757277DAD3700C9EB93 /* BookSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B657756277DAD3600C9EB93 /* BookSearchResponseModel.swift */; };
+		6B657759277DAE3000C9EB93 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B657758277DAE3000C9EB93 /* Book.swift */; };
+		6B65775B277DAE7500C9EB93 /* BookSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B65775A277DAE7500C9EB93 /* BookSearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		6B657704277CCAB200C9EB93 /* ReviewWritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritePresenter.swift; sourceTree = "<group>"; };
 		6B657707277CDF7A00C9EB93 /* SearchBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookViewController.swift; sourceTree = "<group>"; };
 		6B657709277CDF9400C9EB93 /* SearchBookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookPresenter.swift; sourceTree = "<group>"; };
+		6B657753277DAC3800C9EB93 /* BookSearchRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequestModel.swift; sourceTree = "<group>"; };
+		6B657756277DAD3600C9EB93 /* BookSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchResponseModel.swift; sourceTree = "<group>"; };
+		6B657758277DAE3000C9EB93 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		6B65775A277DAE7500C9EB93 /* BookSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,8 @@
 			children = (
 				6B6576C5277C9BB400C9EB93 /* AppDelegate.swift */,
 				6B6576C7277C9BB400C9EB93 /* SceneDelegate.swift */,
+				6B65775C277DAE7900C9EB93 /* Manager */,
+				6B657755277DAC3C00C9EB93 /* Models */,
 				6B657701277CC36100C9EB93 /* Scene */,
 				6B6576CE277C9BB600C9EB93 /* Assets.xcassets */,
 				6B6576D0277C9BB600C9EB93 /* LaunchScreen.storyboard */,
@@ -175,6 +185,24 @@
 				6B657709277CDF9400C9EB93 /* SearchBookPresenter.swift */,
 			);
 			path = SearchBook;
+			sourceTree = "<group>";
+		};
+		6B657755277DAC3C00C9EB93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B657758277DAE3000C9EB93 /* Book.swift */,
+				6B657753277DAC3800C9EB93 /* BookSearchRequestModel.swift */,
+				6B657756277DAD3600C9EB93 /* BookSearchResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B65775C277DAE7900C9EB93 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6B65775A277DAE7500C9EB93 /* BookSearchManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,11 +347,15 @@
 			files = (
 				6B657705277CCAB200C9EB93 /* ReviewWritePresenter.swift in Sources */,
 				6B6576CA277C9BB400C9EB93 /* ReviewListViewController.swift in Sources */,
+				6B657754277DAC3800C9EB93 /* BookSearchRequestModel.swift in Sources */,
+				6B657759277DAE3000C9EB93 /* Book.swift in Sources */,
 				6B6576C6277C9BB400C9EB93 /* AppDelegate.swift in Sources */,
 				6B657708277CDF7A00C9EB93 /* SearchBookViewController.swift in Sources */,
+				6B657757277DAD3700C9EB93 /* BookSearchResponseModel.swift in Sources */,
 				6B657703277CCAA700C9EB93 /* ReviewWriteViewController.swift in Sources */,
 				6B65770A277CDF9400C9EB93 /* SearchBookPresenter.swift in Sources */,
 				6B6576FF277CC35400C9EB93 /* ReviewListPresenter.swift in Sources */,
+				6B65775B277DAE7500C9EB93 /* BookSearchManager.swift in Sources */,
 				6B6576C8277C9BB400C9EB93 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

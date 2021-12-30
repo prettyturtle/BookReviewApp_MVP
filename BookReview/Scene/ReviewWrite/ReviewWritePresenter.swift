@@ -7,18 +7,19 @@
 
 import UIKit
 
-protocol ReviewWirteProtocol {
+protocol ReviewWriteProtocol {
     func setupNavigationItem()
     func showCloseAlertSheet()
     func close()
     func setupViews()
     func presentToSearchBookViewController()
+    func updateViews(title: String, imageURL: URL?)
 }
 
 class ReviewWritePresenter {
-    private let viewController: ReviewWirteProtocol
+    private let viewController: ReviewWriteProtocol
     
-    init(viewController: ReviewWirteProtocol) {
+    init(viewController: ReviewWriteProtocol) {
         self.viewController = viewController
     }
     
@@ -39,5 +40,11 @@ class ReviewWritePresenter {
     
     func didTapBookTitleButton() {
         viewController.presentToSearchBookViewController()
+    }
+}
+
+extension ReviewWritePresenter: SearchBookDelegate {
+    func selectBook(_ book: Book) {
+        viewController.updateViews(title: book.title, imageURL: book.imageURL)
     }
 }

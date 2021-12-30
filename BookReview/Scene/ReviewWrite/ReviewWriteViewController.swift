@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class ReviewWriteViewController: UIViewController {
     
@@ -64,7 +65,7 @@ extension ReviewWriteViewController: UITextViewDelegate {
     }
 }
 
-extension ReviewWriteViewController: ReviewWirteProtocol {
+extension ReviewWriteViewController: ReviewWriteProtocol {
     func setupNavigationItem() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .close,
@@ -135,9 +136,15 @@ extension ReviewWriteViewController: ReviewWirteProtocol {
     }
     
     func presentToSearchBookViewController() {
-        let vc = UINavigationController(rootViewController: SearchBookViewController())
+        let vc = UINavigationController(rootViewController: SearchBookViewController(searchBookDelegate: presenter))
         
         present(vc, animated: true)
+    }
+    
+    func updateViews(title: String, imageURL: URL?) {
+        bookTitleButton.setTitle(title, for: .normal)
+        bookTitleButton.setTitleColor(.label, for: .normal)
+        imageView.kf.setImage(with: imageURL)
     }
 }
 
